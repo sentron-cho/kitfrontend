@@ -1,64 +1,23 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="author" content="홍길동" />
-  <meta name="description" content="시멘틱 태그" />
-</head>
-
 <body>
-  <div id="header">머리말</div>
-  <div id="main">
-    <div id="nav">
-      <div>
-        <span>홈</span>
-        <span>메일</span>
-        <span>뉴스</span>
-      </div>
-    </nav>
-    <div id="section">
-      <div class="article">
-        첫번째 섹션(블로그 포스팅)
-        <!-- <div></div>
-        <div></div>
-        <div></div> -->
-      </div>
-      <div class="article">
-        두번째 섹션(블로그 포스팅)
-      </div>
-      <div class="article">
-        세번째 섹션(블로그 포스팅)
-      </div>
-    </div>
-    <div id="aside">
-      <ul>
-        <li>사이드바 메뉴 1</li>
-        <li>사이드바 메뉴 2</li>
-        <li>사이드바 메뉴 3</li>
-      </ul>
-    </div>
-  </div>
-  <div id="footer">
-    <p>바닥글</p>
-    <span>회사소개</span>
-    <span>서울 강남구 역삼....</span>
-    <span>대표 : 홍길동</span>
-  </div>
+  <div>DIV 태그 영역</div>
+  <span>SPAN 태그 영역 1</span>
+  <span>SPAN 태그 영역 2</span>
+  <span>SPAN 태그 영역 3</span>
+  <h1>H1 제목 태그</h1>
+  <h2>H2 제목 태그</h2>
+  <h3>H3 제목 태그</h3>
+  <h4>H4 제목 태그</h4>
+  <h5>H5 제목 태그</h5>
+  <h6>H6 제목 태그</h6>
+  <p>문단(Paragraph) 태그를 표시합니다.</p>
+  <p>문단 태그에서 여기에서 줄바꿈을(br) 태그를<br/>넣으면 이처럼 줄바꿈이되어 다음 줄에 작성됩니다.</p>
+  <p>문단 태그에서 <strong>강조(Strong) 태그</strong>를 사용하여 강조했습니다.</p>
 </body>
 
 <style>
-  #header, #footer, #nav, #section, .article, #aside { padding: 10px; }
-
   body { margin: 0; }
-  #header { height: 40px; background: rgb(255, 181, 181); }
-  #main { height: calc(100vh - 240px); background: rgb(255, 248, 188); padding: 2px; position: relative; }
-  #footer { height: 200px; background: rgb(201, 223, 255); }
-
-  #header, #main, #footer {
-    border: 1px solid gray;
-    box-sizing: border-box;
-  }
-
-  #nav { border: 1px solid rgb(255, 86, 86); }
-  #section { border: 1px solid rgb(117, 107, 255); height: calc(100% - 64px); width: calc(80% - 44px); }
-  #aside { border: 1px solid rgb(0, 133, 22); height: calc(100% - 68px); width: calc(20%); position: absolute; top: 34px; right: 2; }
-  .article { border: 1px solid rgb(233, 123, 255); height: calc(100% - 40px); width: calc(33.33333% - 26px); display: inline-block; }
+  div { background: rgb(255, 181, 181); }
+  span { background: rgb(255, 201, 86); }
+  p { background: rgb(139, 255, 86); }
+  h1, h2, h3, h4, h5, h6 { background: rgb(196, 196, 196); }
 </style>
