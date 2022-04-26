@@ -1,0 +1,20 @@
+<body>
+  <h2>VIDEO 태그</h2>
+  <video src="day04-4.mp4"></video>
+  <video src="day04-4.mp4" controls width="400px"></video>
+  <video src="day04-4.mp4" controls height="400px"></video>
+  <video src="day04-4.mp4" controls width="500px" height="400px"></video>
+  <video src="day04-4.mp4" controls autoplay loop></video>
+
+  <!-- 일반적으로 외부 스트리밍 사이트에서는 보안상 video 태그 사용이 금지된다. -->
+  <video src="https://youtu.be/adWXZnhnY3A" controls autoplay loop muted></video>
+  
+  <!-- 따라서, 공유하고 싶다면 iframe or embed 태그를 이용해야 한다. -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/adWXZnhnY3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <embed width="560" height="315" src="https://www.youtube.com/embed/adWXZnhnY3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></embed>
+</body>
+
+<style>
+  video { display: block; margin: 10px; }
+</style>
