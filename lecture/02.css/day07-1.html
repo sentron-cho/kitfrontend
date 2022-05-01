@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <!-- h1 { color: rgb(255, 142, 37); } -->
+  <h1>안녕하세요.</h1>
+
+  <!-- 
+      1. * { padding: 0; color: gray; }
+      2. body p { color: red; }
+  -->
+  <p>프론트 엔드 과정 소개</p>
+
+  <div>
+    <!-- 
+      1. * { padding: 0; color: gray; }
+      2. body p { color: red; }
+      3. p, span { color: rgba(128, 255, 0, 0.8); }
+      4. .sel-class { font-style: italic; color:rgb(14, 255, 255); } 
+    -->
+    <p class="sel-class">6월 개강</p>
+    <p class="sel-class">월수금</p>
+
+    <!-- 
+      1. * { padding: 0; color: gray; }
+      2. body p { color: red; }
+      3. p, span { color: rgba(128, 255, 0, 0.8); }
+      4. .sel-class { font-style: italic; color:rgb(14, 255, 255); } 
+      5. #sel-id { color: green; } 
+    -->
+    <p id="sel-id" class="sel-class">19:00</p>
+  </div>
+
+  <span id="sel-id">홍길동</span>
+  
+  <div>
+    <ul>
+      <!-- 
+        1. * { padding: 0; color: gray; }
+        2. ul > li { color: blue; }
+      -->
+      <li>01. HTML</li>
+      <li>02. CSS</li>
+      <li>03. JavaScript</li>
+    </ul>
+    
+    <div>
+      <ol>
+        <!-- 
+          1. * { padding: 0; color: gray; }
+        -->
+        <li>04. React.js</li>
+        <li>05. Node.js</li>
+        <li>06. Mysql</li>
+      </ol>
+    </div>
+  
+  </div>
+</body>
+
+<style>
+	* { padding: 0; color: gray; }
+	h1 { color: rgb(255, 142, 37); }
+	body p { color: red; }
+	ul > li { color: blue; }
+	.sel-class { font-style: italic; color:rgb(14, 255, 255); }
+	#sel-id { color: green; }
+	p, span { color: rgba(128, 255, 0, 0.8); }
+</style>
