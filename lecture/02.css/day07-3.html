@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <!-- 플렉스 박스 -->
+  <h3>플렉스(flex) 속성</h3>
+  <div>
+    <span>no-flex no-flex no-flex no-flex</span>
+    <span>no-flex no-flex no-flex no-flex no-flex</span>
+    <span>no-flex no-flex no-flex no-flex no-flex no-flex</span>
+    <span>no-flex no-flex no-flex no-flex no-flex no-flex no-flex</span>
+  </div>
+  <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+    <span>display: flex;</span>
+    <span>flex-direction: row;</span>
+    <span>display: flex; flex-direction: row;</span>
+    <span>display: flex; flex-direction: row; display: flex; flex-direction: row;</span>
+  </div>
+  <div style="display: flex; flex-direction: column; ">
+    <span>display: flex; flex-direction: column;</span>
+    <span>display: flex; flex-direction: column;</span>
+    <span>display: flex; flex-direction: column; display: flex; flex-direction: column;</span>
+    <span>display: flex; flex-direction: column; display: flex; flex-direction: column; display: flex; flex-direction: column;</span>
+  </div>
+  <!-- 부모 레이아웃에서 가운데 정렬 -->
+  <div style="display: flex; justify-content: center; align-items: center; width: 300px; height: 200px;" id="div-center">
+    <span style="width: 200px; height: 100px;">display: flex; align-items: center; width: 300px; height: 200px;</span>
+  </div>
+</body>
+
+<style>
+	p, span {
+    background-color: rgb(187, 187, 187);
+    border: 1px dashed rgb(66, 45, 255);
+  }
+  div {
+    border: 1px dotted rgb(173, 173, 173);
+    margin-top: 30px;
+  }
+</style>

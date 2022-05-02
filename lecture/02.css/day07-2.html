@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <!-- 디스플레이 속성  -->
+  <h3>디스플레이(display) 속성</h3>
+  <div>
+    <span>SPAN 태그는 기본이 인라인이다</span>
+    <p>P 태그는 기본이 블록이다</p>
+    <p style="display: inline; width: 500px; height: 80px;">P 태그를 인라인으로(width, height 속성 무시)</p>
+    <span style="display: block;">SPAN 태그를 블록으로</span>
+    <p style="display: inline-block; width: 300px; height: 80px;">
+      P 태그를 (display: inline-block; width: 300px; height: 80px;) 속성으로
+    </p>
+  </div>
+  
+
+  <!-- 플로팅 속성  -->
+  <h3>플로팅(float) 속성</h3>
+  <div style="width: 600px; height: 200px;">
+    <span style="float: left;">left 속성 1</span>
+    <span style="float: left;">left 속성 2</span>
+    <span style="float: right;">right 속성 1</span>
+    <span style="float: right;">right 속성 2</span>
+  </div>
+  <div style="width: 200px; height: 100px; float: right;">
+    <span style="float: inherit;">inherit(부모 right) 속성</span>
+  </div>
+
+  <!-- 포지셔닝 속성 -->
+  <h3>포지셔닝(position) 속성</h3>
+  <div style="width: 600px; height: 200px; position: relative;">
+    <span style="position: relative; left: 10px; top: 10px;">relative left 100px top 10px</span>
+    <span style="position: relative; right: 10px; bottom: 10px;">relative left 20px bottom 10px</span>
+    <span style="position: absolute; left: 10px; bottom: 10px">absolute left 10px bottom 10px</span>
+    <span style="position: absolute; right: 10px; bottom: 10px">absolute right 10px bottom 10px</span>
+  </div>
+</body>
+
+<style>
+	p, span {
+    background-color: rgb(187, 187, 187);
+    border: 1px dashed rgb(66, 45, 255);
+  }
+  div {
+    border: 1px dotted rgb(173, 173, 173);
+  }
+</style>
