@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <span>저는 inline 속성의 SPAN 입니다.
+    <div>저는 block 속성의 DIV 입니다.</div>
+    <p>저는 block 속성의 P 입니다.</p>
+    작은 크기인 inline 속성이 큰 크기의 block 속성을 포함하려다 보니 레이아웃이 엉망이된다.
+  </span>
+
+  [margin-top: 100px]로 간견을 주고...
+
+  <span style="display: block; margin-top: 100px;">SPAN 이지만 display: block로 설정한다면
+    <div style="display: inline-block; width: 600px; height: 60px;">DIV는 [display: inline-block; width: 400px; height: 60px;]로 설정한다면...</div>
+    <p>P는 그대로 block으로 둔다면...</p>
+    모두 span에 넣는 것이 가능하다. 하지만 기본적인 요소의 속성을 고려한 레이아웃 설계를 하자...
+  </span>
+</body>
+<style>
+  div { border: 1px dotted blue; }
+  span { border: 1px dotted green; }
+  p { border: 1px dotted orange; }
+</style>
