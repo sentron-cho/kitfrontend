@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  cover: 이미지의 비율을 유지하며 화면을 채움
+  <div style="background-size: cover;"></div>
+  contain: 가로/세로 중 먼저 채워지는 쪽으로 이미지를 맞춤
+  <div style="background-size: contain;"></div>
+  100px 50px: 가로/세로 순으로 픽셀 값으로 지정
+  <div style="background-size: 100px 50px;"></div>
+  60% 70%: 가로/세로 순으로 퍼센트 값으로 지정(부모 요소에 따름)
+  <div style="background-size: 60% 70%;"></div>
+</body>
+
+<style>
+  div { border: 2px dotted gray; width: 300px; height: 200px; background-image: url("./day11-1.png"); background-repeat: no-repeat; }
+</style>

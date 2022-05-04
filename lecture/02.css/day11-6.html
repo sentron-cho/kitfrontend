@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  border-box: 테두리 경계까지 모두 차지, 점선 테두리 사용시 투명 부분에 이미지 표시
+  <div style="background-clip: border-box;"></div>
+	padding-box: 안쪽 여백까지 차지, 테두리에서는 표시되지 않음
+  <div style="background-clip: padding-box;"></div>
+	content-box: 배경을 콘텐츠 상자에 맞춤, 안쪽 여백, 테두리에서 표시되지 않음
+  <div style="background-clip: content-box;"></div>
+	text: 배경을 텍스트에만 보이게 함, 텍스트 클리핑 마스크 효과와 동일
+  <div style="background-clip: text;"></div>
+</body>
+
+<style>
+  div { 
+    border: 2px dotted gray; 
+    width: 360px; 
+    height: 200px; 
+    background-image: url("./day11-2.png"); 
+    background-repeat: no-repeat; 
+  }
+</style>
