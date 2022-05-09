@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko" id="facebook" class="">
+  <head>
+  </head>
+  <body>
+    <div class="container-box">
+      <div class="logo-box">
+        <img src="../images/facebook-logo.svg" />
+        <h2>Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.</h2>
+      </div><!--
+        inline-block를 연속으로 사용할 경우 줄바꿈 및 공백 관련한 여백 문제가 발생한다.
+        https://findawayer.tistory.com/entry/inlineblock-%EC%82%AC%EC%9D%B4-%EA%B0%84%EA%B2%A9-%EB%AC%B8%EC%A0%9C
+      --><div class="login-box">
+        <form action="./02_facebook_main.html" id="login_form" method="GET">
+          <div>
+            <!-- aria-label 웹 접근성 속성 : 현재 요소를 설명할 텍스트가 없을 경우에 사용 -->
+            <input class="input-email" type="text" name="email" id="email" placeholder="이메일 또는 전화번호" 
+              autofocus="1" aria-label="이메일 및 연락처" />
+          </div>
+          <div>
+            <input class="input-pass" type="password" name="pass" id="pass" placeholder="비밀번호" 
+              aria-label="비밀번호" />
+          </div>
+          <div>
+            <button class="login-button" value="1" name="login" type="submit">로그인</button>
+          </div>
+          <div>
+            <a href="./03_facebook_identify.html">비밀번호를 잊으셨나요?</a>
+          </div>
+          <div class="div-line"></div>
+          <div>
+            <a class="regist" href="./04_facebook_regist.html">새 계정 만들기</a>
+          </div>
+        </form>
+        <div class="new-page">유명인, 브랜드 또는 비즈니스를 위한
+          <a href="./05_facebook_create.html">페이지 만들기</a>
+        </div>
+        <!-- <div><span>Meta © 2022</span></div> -->
+      </div>
+    </div>
+  </body>
+</html>
+ 
+<style>
+  body { background: #f0f2f5; }
+
+  .container-box {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 140px;
+  }
+  .logo-box {
+    display: inline-block;
+    width: 560px;
+    height: 360px;
+    vertical-align: top;
+  }
+  .logo-box > img {
+    width: 300px;
+    margin-left: -26px;
+    margin-top: 44px;
+  }
+  .logo-box > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+  }
+
+  .login-box {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 400px;
+    height: 360px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    text-align: center;
+    background: white;
+  }
+  .input-email, .input-pass {
+    width: calc(100%);
+    height: 48px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+  .input-email:focus, .input-pass:focus {
+    outline: none !important;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: #1877f2;
+  }
+  .login-button {
+    width: 100%;
+    height: 48px;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+  }
+  .div-line {
+    border-bottom: 1px solid #dadde1;
+    width: 100%;
+    margin: 20px 0;
+  }
+  a {
+    margin-top: 12px;
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .regist {
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #42b72a;
+    color: white;
+    font-weight: bold;
+  }
+  .new-page { 
+    margin-top: 60px; 
+    font-size: 14px;
+  }
+  .new-page > a {
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+  }
+  .new-page > a:hover {
+    text-decoration: underline;
+  }
+</style>
