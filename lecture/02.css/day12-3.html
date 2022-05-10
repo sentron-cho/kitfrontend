@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <ul>
+    <li>로그인</li>
+    <li>회원가입</li>
+    <li>마이페이지</li>
+    <li>사이트맵</li>
+  </ul>
+
+  
+  <div class="list">
+    <span>로그인</span>
+    <span>회원가입</span>
+    <span>마이페이지</span>
+    <span>사이트맵</span>
+  </div>
+
+  <ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>React</li>
+  </ol>
+
+</body>
+
+<style>
+  * { padding: 0; margin: 0; }
+  body { margin: 20px; }
+
+  /* 가상 선택자 after를 사용하여 메뉴 네비 만들기 */
+  ul {
+    display: block;
+    height: 50px;
+  }
+  ul > li {
+    list-style: none;
+    float: left;
+    padding: 0 15px;
+  }
+  ul > li::after {
+    content: "|";
+    float: right;
+    color: rgb(21, 0, 214);
+    margin-right: -17px;
+  }
+  ul > li:last-child:after {
+    content: "";
+  }
+
+    /* after를 사용하지 않고 만들기 */
+  .list {
+    margin-top: 20px;
+  }
+  .list > span {
+    border-left: 1px solid #aaa;
+    margin-right: 20px;
+    padding-left: 20px;
+  }
+  .list > span:first-child {
+    border-left: none;
+  }
+
+  /* 가상 선택자를 이용한 여러가지 방법 */
+  ol { margin-top: 20px; }
+  ol > li { list-style: none; padding-left: 10px; }
+  ol > li::before { padding-right: 5px;  }
+  ol > li:nth-child(1):before {
+    content: 'A.'; /* 텍스트 */
+    color: #f00;
+  }
+  ol > li:nth-child(2):before {
+    content: '◎'; /* 특수문자 */
+    color: #00f;
+  }
+  ol > li:nth-child(3):before {
+    content: '👨🏽‍💻'; /* 이모지 */
+    border: 1px solid;
+  }
+  ol > li:nth-child(4):before {
+    content: '\0244'; /* 캐릭터 코드 */
+    background-color: #0f0;
+  }
+</style>

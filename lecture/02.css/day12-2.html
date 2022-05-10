@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+    <!-- float 속성에서의 문제점 -->
+    <div class="div-float left">float:left</div>
+    <div class="div-float left">float:left</div>
+    <div class="last-box">float 없는 DIV</div>
+
+    <!-- float 속성에서의 문제점 해결 방법 1 -->
+    <!-- 이 경우 자식 태그의 높이를 200px로 변경하면? -->
+    <!-- <div style="height: fit-content; height: 100px;">
+      <div class="div-float left">float:left</div>
+      <div class="div-float left">float:left</div>
+    </div>
+    <div class="last-box">float 없는 DIV</div> -->
+
+    <!-- float 속성의 문제점 해결 방법 clear 속성 사용 -->
+    <div class="clear-fixed">
+      <div class="div-float left">float:left</div>
+      <div class="div-float left">float:left</div>
+    </div>
+
+    <div class="last-box">float 없는 DIV</div>
+</body>
+
+<style>
+  * { padding: 0; margin: 0; }
+  body { margin: 20px; }
+
+  div { 
+    background: rgb(200, 200, 200, 0.3); 
+    box-sizing: border-box;
+  }
+
+  .div-float { 
+    float: left; 
+    width: 100px;
+    height: 100px; 
+    /* height: 200px; */
+    border: 1px dotted rgb(48, 48, 48); 
+  }
+  .last-box { 
+    width: 120px;
+    height: 200px; 
+    background: rgb(255, 176, 102); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin-bottom: 20px;
+  }
+
+  .clear-fixed:after { display: block; content: ""; clear: both; }
+</style>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <section class="s1">
+    <h2>일반적인 DIV</h2>
+    <div></div>
+    <div></div>
+  </section>
+  
+  <section>
+    <p>float:left 속성 DIV</p>
+    <div class="div-float left"></div>
+    <div class="div-float left"></div>
+  </section>
+
+  <section>
+    <p>float:right 속성 DIV</p>
+    <div class="div-float right"></div>
+    <div class="div-float right"></div>
+  </section>
+  
+  <section>
+    <p>float:both 속성 DIV</p>
+    <div class="div-float both"></div>
+    <div class="div-float both"></div>
+  </section>
+</body>
+
+<style>
+  * { padding: 0; margin: 0; }
+  section { 
+    display: block; 
+    height: 160px; 
+    border-bottom: 1px dashed; 
+    padding: 10px; 
+  }
+  div { 
+    border: 1px dotted rgb(48, 48, 48); 
+    width: 100px;
+    height: 100px; 
+    background: rgb(204, 204, 204); 
+  }
+
+  .s1 { height: 300px; }
+  .div-float { float: left; }
+  .right { float: right; }
+  .both { float: both; }
+</style>
