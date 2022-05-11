@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <section><div class="div-h-1">margin 이용 가로 가운데 정렬 방법</div></section>
+  <section class="div-h-2"><div>text-align 이용 가로 가운데 정렬 방법</div></section>
+  <section><span class="span-h-3">display: table 이용 가로 가운데 정렬(박스의 폭을 모를 경우)</span></section>
+  
+  <section><div class="div-v-1">position/margin 이용 세로 가운데 정렬 방법(박스 높이를 알 경우)</div></section>
+  <section><div class="div-v-2">position/transform 이용 세로 가운데 정렬 방법(박스 높이를 모를 경우)</div></section>
+  <section><div class="div-v-3">line-height 이용 세로 가운데 정렬(텍스트 경우만 사용)</div></section>
+  <section class="div-v-4"><div>display: flex 세로 가운데 정렬 방법</div></section>
+  <section class="div-v-5"><div>display: grid 세로 가운데 정렬 방법</div></section>
+
+  <section><div class="div-hv-1">position/transform 이용 가로/세로 가운데 정렬 방법</div></section>
+  <section class="div-hv-2"><div>position/transform 이용 가로/세로 가운데 정렬 방법</div></section>
+
+</body>
+
+<style>
+  * { padding: 0; margin: 0; }
+  body { margin: 5px; }
+
+  section { 
+    display: block; 
+    height: 200px; 
+    border-bottom: 1px dashed; 
+    padding: 10px; 
+  }
+  div { 
+    border: 1px dotted rgb(48, 48, 48); 
+    width: 300px;
+    height: 100px; 
+    background: rgb(204, 204, 204); 
+  }
+
+  /* margin 이용 가로 가운데 정렬 방법 */
+  .div-h-1 {
+    margin-left: auto; 
+    margin-right: auto;
+    /* margin: 0 auto; */
+    /* margin: 0 auto 0 auto; */
+  }
+
+  /* text-align 이용 가로 가운데 정렬 방법 */
+  .div-h-2 {
+    text-align: center;
+  }
+  .div-h-2 > div {
+    display: inline-block;
+  }
+
+  /* display: table 이용 가로 가운데 정렬(박스의 폭을 모를 경우) */
+  .span-h-3 { 
+    border: 1px dotted rgb(48, 48, 48); 
+    background: rgb(204, 204, 204); 
+    display: table; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  /* position/margin 이용 세로 가운데 정렬 방법(박스 높이를 알 경우) */
+  .div-v-1 {
+    position: relative;
+    top: 50%;
+    margin-top: -50px
+  }
+  /* position/transform 이용 세로 가운데 정렬 방법(박스 높이를 모를 경우) */
+  .div-v-2 {
+    position: relative;
+    top: 50%;
+	  transform: translateY(-50%);
+  }
+  /* line-height 이용 세로 가운데 정렬(텍스트 경우만 사용) */
+  .div-v-3 {
+    width: 600px;
+    height: 200px; 
+    line-height: 200px;
+    text-align: center;
+  }
+
+  /* display: table 이용 세로 가운데 정렬 방법 */
+  .div-v-4 {
+    display: flex;
+    align-items: center; /* 방향이 row 기준: 세로 중앙 정렬*/
+  }
+
+  /* display: grid 이용 세로 가운데 정렬 방법 */
+  .div-v-5 {
+    display: grid;
+    align-items: center; /* 방향이 row 기준: 세로 중앙 정렬*/
+  }
+
+  /* position/transform 이용 가로/세로 가운데 정렬 방법 */
+  /* 부모에 상대적 중앙 relative, 화면에 절대적 중앙(스크롤) absolute, 화면에 고정 중앙 fixed */
+  .div-hv-1 {
+    position: relative; 
+    top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+  }
+
+  /* display: table 이용 가로/세로 가운데 정렬 방법 */
+  .div-hv-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
