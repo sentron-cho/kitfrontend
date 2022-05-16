@@ -67,6 +67,46 @@
                 </div>
               </div>
             </li>
+            <li>
+              <div class="card">
+                <div class="head">
+                  <div>
+                    <img class="logo" src="../images/edu_icon.png" alt="광고 아이콘"/>
+                    <span class="title">에듀윌</span>
+                    <img class="more" src="../images/more.png" alt="더보기 메뉴">
+                  </div>
+                  <div class="text">
+                    <p>🚨기간한정 특별 이벤트🚨</p>
+                    <p>초시생 필수템, 만화입문서 무료배포!</p>
+                    <p class="blue">#합격자수1위 #에듀윌 #공인중개사</p>
+                  </div>
+                </div>
+                <div class="body">
+                  <div class="image">
+                    <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                  </div>
+                  <div class="text">
+                    <div>
+                      <p class="grey sm">EDUWILL.NET</p>
+                      <p class="bold">입문교재 선착순 무료신청☞</p>
+                      <p class="grey">합격자 수 1위 에듀윌 공인중개사</p>
+                    </div>
+                    <button>더 알아보기</button>
+                  </div>
+                </div>
+                <div class="foot">
+                  <div class="btn-box active">
+                    <div><img src="../images/home.png" alt="홈 바로가기" /><span class="btn-text">좋아요</span></div>
+                  </div>
+                  <div class="btn-box">
+                    <div><img src="../images/youtube.png" alt="동영상 바로가기" /><span class="btn-text">댓글 달기</span></div>
+                  </div>
+                  <div class="btn-box">
+                    <div><img src="../images/people.png" alt="사용자 바로가기" /><span class="btn-text">공유 하기</span></div>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </section>
       </main>
@@ -174,6 +214,9 @@
     width: 800px; 
     margin: 10px auto; 
   }
+  main .container li {
+    margin: 10px 0;
+  }
 
   main .card { 
     border-radius: 8px; 
@@ -230,6 +273,11 @@
     font-size: 16px;
     border: none;
     margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  main .body button:hover {
+    background-color: rgb(220, 220, 220);
   }
 
   p.blue { color: #1877F2; }
@@ -237,25 +285,29 @@
   p.bold { font-weight: bold; }
   p.sm { font-size: 14px; margin-bottom: 5px; }
 
-  main .foot { height: 40px; font-size: 0px; } 
+  main .foot { 
+    height: 40px; 
+    font-size: 0px; 
+    display: flex;
+    flex-direction: row;
+  } 
   main .foot img { height: 20px; } 
   main .foot .btn-box {
     display: flex;
-    flex-direction: row;
+    flex-grow: 1;
     font-size: 16px;
-    text-align: center;
-    background-color: #65676B;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px 0;
+    cursor: pointer;
     border-radius: 5px;
-    /* height: 30px; */
-    /* margin: 5px 0; */
+   }
+   main .foot .btn-box:hover {
+    background-color: rgb(240, 240, 240);
    }
    main .foot .btn-box > div {
+    margin: 0 auto;
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 1;
-    flex-basis: 0;
    }
    main .foot .btn-box img { margin-right: 10px; }
 
