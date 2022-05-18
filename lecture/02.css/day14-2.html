@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h2>order</h2>
+  <section class="order">
+    <div class="container">
+      <div class="item" style="order: 0;">order: 0;</div>
+      <div class="item" style="order: 0;">order: 0;</div>
+      <div class="item" style="order: 0;">order: 0;</div>
+      <div class="item" style="order: 0;">order: 0;</div>
+      <div class="item" style="order: 0;">order: 0;</div>
+    </div>
+    <div class="container">
+      <div class="item" style="order: 1;">order: 1;</div>
+      <div class="item" style="order: -10;">order: -10;</div>
+      <div class="item" style="order: 1;">order: 1;</div>
+      <div class="item" style="order: 12;">order: 12;</div>
+      <div class="item" style="order: 0;">order: 0;</div>
+    </div>
+  </section>
+
+  <h2>flex-grow</h2>
+  <section class="flex-grow">
+    <div class="container">
+      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+    </div>
+    <div class="container">
+      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+      <div class="item" style="flex-grow: 2;">flex-grow: 2;</div>
+      <div class="item" style="flex-grow: 3;">flex-grow: 3;</div>
+    </div>
+  </section>
+
+  <!-- <h2>flex-basis</h2>
+  <section class="flex-basis">
+    <div class="container flex-basis">
+      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+      <div class="item" style="flex-grow: 2;">flex-grow: 2;</div>
+    </div>
+    <div class="container flex-basis">
+      <div class="item" style="flex-grow: 1; flex-basis: 100px;">flex-grow: 1;<br>flex-basis: 100px;</div>
+      <div class="item" style="flex-grow: 1; flex-basis: 100px;">flex-grow: 2;<br>flex-basis: 100px;</div>
+      <div class="item" style="flex-grow: 2; flex-basis: 100px;">flex-grow: 3;<br>flex-basis: 100px;</div>
+    </div>
+  </section>
+   -->
+  <h2>align-items row</h2>
+  <section class="align-items">
+    <div class="container" style="height: 300px;">
+      <div class="item stretch" style="align-self: stretch; height: auto;">stretch<br>height: auto;</div>
+      <div class="item" style="align-self: flex-start;">flex-start</div>
+      <div class="item" style="align-self: center;">center</div>
+      <div class="item" style="align-self: flex-end;">flex-end</div>
+    </div>
+  </section>
+
+  <h2>align-items column</h2>
+  <section class="align-items">
+    <div class="container" style="flex-direction: column; height: fit-content;">
+      <div class="item" style="align-self: stretch; width: auto;">stretch<br>width: auto;</div>
+      <div class="item" style="align-self: stretch; width: auto;">stretch<br>width: auto;</div>
+    </div>
+    <div class="container" style="flex-direction: column; height: fit-content;">
+      <div class="item" style="align-self: flex-start;">flex-start</div>
+      <div class="item" style="align-self: flex-start;">flex-start</div>
+    </div>
+    <div class="container" style="flex-direction: column; height: fit-content;">
+      <div class="item" style="align-self: center;">center</div>
+      <div class="item" style="align-self: center;">center</div>
+    </div>
+    <div class="container" style="flex-direction: column; height: fit-content;">
+      <div class="item" style="align-self: flex-end;">flex-end</div>
+      <div class="item" style="align-self: flex-end;">flex-end</div>
+    </div>
+    <div class="container" style="flex-direction: column;">
+      <div class="item" style="align-self: stretch; width: auto;">stretch<br>width: auto;</div>
+      <div class="item" style="align-self: flex-start;">flex-start</div>
+      <div class="item" style="align-self: center;">center</div>
+      <div class="item" style="align-self: flex-end;">flex-end</div>
+    </div>
+  </section>
+
+</body>
+
+<style>
+  body { padding-bottom: 100px; }
+  div {
+    background-color: rgb(200, 200, 200); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin: 2px;
+  }
+
+  section {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-top: dashed 1px;
+    border-color: gray;
+  }
+  
+  /* label { position: absolute; bottom: -20px; left: 0px; } */
+  
+  .container { width: 600px; min-height: 80px; position: relative; display: flex; flex-direction: row; }
+
+  .item { width: 100px; height: 60px; background-color: yellow; font-size: 14px; text-align: center; }
+
+</style>
