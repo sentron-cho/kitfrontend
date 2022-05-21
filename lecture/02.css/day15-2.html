@@ -4,53 +4,65 @@
 </head>
 
 <body>
-  <h3>미디어 쿼리(Media Query)</h3>
-  <div class="box"></div>
-  
-  <div class="desktop">이 텍스트는 데스크탑에서만 보여집니다.</div>
-  <div class="mobile">이 텍스트는 모바일에서만 보여집니다.</div>
+  <h2>그리드 라인 배치</h2>
+  <section class="s1">  
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+    <div class="box4">Box 4</div>
+    <div class="box5">Box 5</div>
+    <div class="box6">Box 6</div>
+  </section>
 </body>
 
 <style>
-  div { width: 200px; height: 200px; background-color: rgb(200,200,200); margin-bottom: 30px; }
-  .desktop, .mobile { display: none; }
-  /* 
-    600px 이하의 화면일 경우 아래의 스타일을 적용한다.
-    즉, 최대 크기가 600px까지만 스타일 적용 
-  */
-	@media (max-width: 600px) {
-		.box { background-color: yellow; }
-	}
+  body { padding-bottom: 200px;}
 
-  /* 
-    1200px 이상의 화면일 경우 아래의 스타일을 적용한다.
-    즉, 최소 크기가 1200px부터 스타일 적용
-  */
-	@media (min-width:1200px) {
-		.box { background-color: green; }
-	}
-
-  /*
-  800px 이하의 화면에서만 스타일을 적용함니다.
-  즉, 모바일 화면에서 스타일을 적용합니다.
-  */
-  @media (max-width: 800px) {
-    .mobile {
-      display: block;
-      background-color: rgb(255, 185, 185);
-      color: red;
-    }
+  section { 
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
   }
 
-    /*
-	  800px 이상의 화면에서만 스타일을 적용합니다.
-	  즉, 데스크탑 화면에서 스타일을 적용합니다.
-  */
-  @media (min-width: 800px) {
-    .desktop {
-      display: block;
-      background-color: rgb(169, 182, 255);
-      color: blue;
-    }
+  div {
+    background-color: rgb(255, 255, 100); 
+    border: 1px dotted rgb(48, 48, 48);
+    padding: 5px;
+  }
+
+  .box1 { 
+    background: rgb(255, 200, 200); 
+    grid-column: 1/4;   /* 1 ~ 4까지(전체 컬럼)*/
+    grid-row: 1/2;      /* 1 ~ 2까지(1줄)*/
+  }
+
+  .box2 { 
+    background: rgb(200, 255, 200); 
+    grid-column: 1/2;   /* 1 ~ 2까지(1컬럼)*/
+    grid-row: 2/4;      /* 2 ~ 4까지(2줄)*/
+  }
+
+  .box3 { 
+    background: rgb(200, 200, 255); 
+    grid-column: 2/4;   /* 2 ~ 4까지 */
+    grid-row-start: 2;  /* 2번줄(만) */
+  }
+
+  .box4 { 
+    background: rgb(255, 255, 200); 
+    grid-column-start: 2;
+    grid-row-start: 3;  /* 3번줄(만) */
+  }
+
+  .box5 { 
+    background: rgb(255, 200, 255); 
+    grid-column-start: 3;
+    grid-row-start: 3;  /* 3번줄(만) */
+    grid-row-end: 5;  /* 3번줄(만) */
+  }
+
+  .box6 { 
+    background: rgb(200, 255, 255); 
   }
 </style>
