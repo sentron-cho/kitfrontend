@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" id="facebook" class="">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 먼저 기존의 css를 우선으로 링크하자 -->
+    <link rel="stylesheet" type="text/css" href="../css/01.index.css" />
+    <!-- 그리고 반응형 css 파일을 링크하자 -->
+    <link rel="stylesheet" type="text/css" href="../css/11.index.css" />
+    <!-- 링크한(내부에 정의된) 순서에 의해 이후에 정의한 내용이 덮어씌워진다. -->
+  </head>
+  <body>
+    <div class="container-box">
+      <div class="logo-box">
+        <img src="../images/facebook-logo.svg" />
+        <h2>Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.</h2>
+      </div><!--
+        inline-block를 연속으로 사용할 경우 줄바꿈 및 공백 관련한 여백 문제가 발생한다.
+        https://findawayer.tistory.com/entry/inlineblock-%EC%82%AC%EC%9D%B4-%EA%B0%84%EA%B2%A9-%EB%AC%B8%EC%A0%9C
+      --><div class="login-box">
+        <form action="./02_facebook_main.html" id="login_form" method="GET">
+          <div>
+            <!-- aria-label 웹 접근성 속성 : 현재 요소를 설명할 텍스트가 없을 경우에 사용 -->
+            <input class="input-email" type="text" name="email" id="email" placeholder="이메일 또는 전화번호" 
+              autofocus="1" aria-label="이메일 및 연락처" />
+          </div>
+          <div>
+            <input class="input-pass" type="password" name="pass" id="pass" placeholder="비밀번호" 
+              aria-label="비밀번호" />
+          </div>
+          <div>
+            <button class="login-button" value="1" name="login" type="submit">로그인</button>
+          </div>
+          <div>
+            <a href="./03_facebook_identify.html">비밀번호를 잊으셨나요?</a>
+          </div>
+          <div class="div-line"></div>
+          <div>
+            <a class="regist" href="./04_facebook_regist.html">새 계정 만들기</a>
+          </div>
+        </form>
+        <div class="new-page">유명인, 브랜드 또는 비즈니스를 위한
+          <a href="./05_facebook_create.html">페이지 만들기</a>
+        </div>
+        <!-- <div><span>Meta © 2022</span></div> -->
+      </div>
+    </div>
+  </body>
+</html>
