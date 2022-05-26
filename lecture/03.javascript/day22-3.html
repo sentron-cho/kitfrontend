@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>JavaScript</h1>
+</body>
+
+<script>
+  let a = "Hello";
+  console.log(typeof a);
+
+  a = 123;
+  console.log(typeof a);
+
+  a = true;
+  console.log(typeof a);
+
+  console.log("===============");
+  a = [];
+  console.log("[]");
+  console.log(typeof a);
+  console.log(a instanceof Array);
+
+  a = new Array();
+  console.log("new Array()");
+  console.log(typeof a);
+  console.log(a instanceof Array);
+  console.log("===============");
+
+  a = {};
+  console.log("{}");
+  console.log(typeof a);
+  console.log(a instanceof Object);
+
+  a = new Object();
+  console.log("new Object()");
+  console.log(typeof a);
+  console.log(a instanceof Object);
+  console.log("===============");
+
+  a = null;
+  console.log(typeof a);
+
+  a = undefined;
+  console.log(typeof a);
+
+  a = function() {};
+  console.log(typeof a);  
+</script>

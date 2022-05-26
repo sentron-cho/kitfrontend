@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>JavaScript</h1>
+</body>
+
+<script>
+  // 산술연산(사칙연산)
+  let n1 = 1 + 2; // 3
+  let n2 = 5 - 3; // 2
+  let n3 = 2 * 4; // 8
+  let n4 = 6 / 4; // 1.5
+  console.log("산술연산(사칙연산)");
+  console.log({n1, n2, n3, n4});
+
+  // 산술연산(나머지 연산)
+  let n5 = 8 % 3; // 2
+  console.log("산술연산(나머지연산)"); 
+  console.log(n5);
+
+  let n6 = 4 % 2; // 짝수/홀수 찾기(나머지가 0이면 짝수/1이면 홀수)
+  let n7 = 5 % 2; // 짝수/홀수 찾기(나머지가 0이면 짝수/1이면 홀수)
+  console.log("짝수/홀수 찾기"); 
+  console.log({n6, n7})
+
+  // 문자열 연산(더하기)
+  let s1 = 'hello ' + 'world';  // 'hello world'
+  let s2 = 'hi' + 9;            // 'hi9'
+  let s3 = 1 + 'what' + 2;      // '1what2'
+  let s4 = 3 + 4 + 'wow';       // '7wow'
+  console.log("문자열 연산(더하기)"); 
+  console.log({s1, s2, s3, s4});
+  // 모든 숫자형은 문자열과 더하면 모두 문자화 된다.
+  
+  // 증감 연산자
+  console.log("증감 연산자"); 
+  let i = 0;
+  i = i + 1;  // i = 1
+  console.log(i); 
+  i += 1;     // i = i + 1과 같다 i = 2
+  console.log(i); 
+  i++;        // i = i + 1과 같다 i = 3
+  console.log(i);
+
+  console.log("====================="); 
+  console.log("전위 증감 증감식");
+  console.log(++i); // 먼저 ++한 후에 alert하여 3을 alert하게 됩니다.
+  console.log("후위 증감 연산자");
+  console.log(i++); // 1을 먼저 alert한 후에 ++되어 i는 2가됩니다.
+  console.log("후위 증감 연산자(증감식 후)");
+  console.log(i)
+  console.log("====================="); 
+
+  // 비교 연산자
+  console.log("비교 연산자");
+  console.log(100 == 10 * 10); // true
+  console.log(6 != 2 * 2); // true
+  console.log(2 * 5 > 3 * 3); // true
+  console.log(6 * 3 <= 2 * 9); // true
+
+  // 삼항 연산자
+  console.log("삼항 연산자");
+  let value = i > 10 ? 15 : 6;
+  console.log(value);
+
+  // 논리 연산자
+  console.log("논리 연산자");
+  // and
+  console.log(true && true);
+  console.log(true && false);
+  console.log(false && true);
+  console.log(false && false);
+
+  // or
+  console.log(true || true);
+  console.log(true || false);
+  console.log(false || true);
+  console.log(false || false);
+
+  // not
+  console.log(!true);
+  console.log(!false);
+
+  // 비교연산자
+  console.log("비교 연산자 ==");
+  console.log(0 == 0);
+  console.log(0 == ''); 
+  console.log(0 == false);
+  console.log(0 == []);
+
+  console.log("비교 연산자 ===");
+  console.log(0 === 0);
+  console.log(0 === ''); 
+  console.log(0 === false);
+  console.log(0 === []);
+
+  console.log("1 == 1 : " + (1 == 1));
+  console.log("1 == '1' : " + (1 == '1'));
+
+  console.log("1 === 1 : " + (1 === 1));
+  console.log("1 === '1' : " + (1 === '1'));
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>JavaScript</h1>
+</body>
+
+<script>
+  // 1. 중복 선언
+  var va = 10;
+  console.log('첫번째 var 변수 선언/초기화(10) : ' + va);
+
+  var va = 20;
+  console.log('두번째 var 변수 선언/초기화(20) : ' + va);
+
+  var va;
+  console.log('세번째 var 변수 선언/초기화(X) : ' + va);
+
+  let la = 10;  // 아래에서 중복 선언되어 에디터에서 표시되는 오류
+  console.log('첫번째 let 변수 선언/초기화(10) : ' + la);
+
+  // let la = 20;  // SyntaxError: Identifier 'la' has already been declared
+  // console.log('두번째 let 변수 선언/초기화(20) : ' + la);
+
+  const ca = 10; // 아래에서 중복 선언되어 에디터에서 표시되는 오류
+  console.log('첫번째 const 변수 선언/초기화(10) : ' + ca);
+
+  // const ca = 10;  // SyntaxError: Identifier 'ca' has already been declared
+  // console.log('두번째 const 변수 선언/초기화(20) : ' + ca);
+
+  // var 변수는 중복 선언을 할경우 항상 마지막에 저장한 값을 가지고 있다.
+
+  // 2. 재할당
+  var vb = 10;
+  vb = 20;
+  console.log('var 변수 선언/초기화 및 재할당(20) : ' + vb);
+
+  let lb = 30;
+  lb = 40;
+  console.log('let 변수 선언/초기화 및 재할당(40) : ' + lb);
+
+  // const cb = 50;
+  // cb = 60;  // TypeError: Assignment to constant variable.
+  // console.log('const 변수 선언/초기화 및 재할당(60) : ' + cb);
+
+  // const는 반드시 선언과 동시에 초기화 해야 한다.
+  // const cc; // SyntaxError: Missing initializer in const declaration
+  // cc = 70;
+
+  // 3. 스코프 : 전역변수 vs 지역변수
+  if(true) {
+    var var1 = "123";     // 전역변수
+
+    let var2 = "456";     // 지역변수
+    const var3 = "789";   // 지역변수
+
+    console.log(var1);  // 가능
+    console.log(var2);  // 가능
+    console.log(var3);  // 가능
+  }
+
+  console.log(var1);  // 가능
+  console.log(var2);  // 오류
+  console.log(var3);  // 오류
+</script>
