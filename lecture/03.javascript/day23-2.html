@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>Switch 조건문</h1>
+</body>
+
+<script>
+  // switch 조건문은 기본적으로 () 안에 변수(값)가 온다.
+  let a = 1;
+  switch(a) {
+    case 1:
+      console.log("1와 같은 경우...");
+      break;
+    case 2:
+      console.log("2와 같은 경우...");
+      break;
+    default:
+      console.log("앞에 모든 경우가 아니면...");
+      break;
+  }
+
+  // 변수의 자료형 모두 가능하지만, case에서도 동일하게 맞춰야 한다.
+  let b = "1";
+  switch(b) {
+    case 1:
+      console.log("숫자입니다.");
+      break;
+    case "1":
+      console.log("문자입니다.");
+      break;
+    default:
+      console.log("앞에 모든 경우가 아니면...");
+      break;
+  }
+
+  // () 안에 연삭식도 가능하다. 즉, 연산후 최종 결과는 값이다.
+  let c = 10;
+  switch(c % 2) {
+    case 0:
+      console.log("짝수 입니다.");
+      break;
+    default:
+      console.log("홀수 입니다.");
+      break;
+  }
+
+  // () 안에 비교문도 가능하다. 즉, 비교후 최종 결과는 값(true/false)이다.
+  switch(c > 4) {
+    case true:
+      console.log("참일 경우");
+      break;
+    // case false:
+    //   console.log("거짓일 경우");
+    //   break;
+    default:
+      console.log("거짓일 경우");
+      break;
+  }
+</script>

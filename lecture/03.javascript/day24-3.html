@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>JavaScript</h1>
+</body>
+
+<script>
+  // 기본 기능 함수 선언문(생성)
+  function print() { 
+    console.log("안녕하세요. 홍길동입니다."); 
+  }
+
+  // 함수 사용(호출)
+  print();
+
+  printName("[선언식 이전 호출 가능 함수]")
+
+  // 매개변수(파라메터)/인자를 이용해 동적으로 이름 출력(함수의 재사용성을 높인다).
+  // 함수명을 갖는 함수 선언식으로 코드 평가에 의해 전역으로 등록되는 경우의 함수 선언이다.
+  function printName(name) {
+    console.log("제 이름은 " + name + "입니다.");
+  }
+
+  // 함수 사용(호출)
+  printName("김유신");
+  printName("이순신");
+
+  // printAge("[선언식 이전 호출 불가능]");  // 오류
+
+  // 이름 있는 함수 생성(생성한 함수를 변수에 할당)
+  // 함수명을 갖지 않는 선언식으로 코드 평가에 의해 변수 형식으로 간주한다.
+  // 즉, 변수가 생성된/할당된 이후에만 호출이 가능하다.
+  const printAge = function(age) {
+    console.log("제 나이는 " + age + "살 입니다.");
+  }
+
+  // 함수 사용(호출)
+  printAge(12);
+  printAge(30);
+
+  // printScore(90); // 불가능
+  
+  // ES6 부터 Arrow Function 이 추가
+  // const printScore = function(score) {
+  //   console.log("점수는 " + score + "점입니다.");
+  // }
+  const printScore = (score) => {
+    console.log("점수는 " + score + "점입니다.");
+  }
+
+  printScore('100');
+
+  const func = new Function(console.log("안녕"));
+  // func("안녕하세요");
+
+  // 함수 결과값 반환
+  const sum = function(a, b) {
+    let c = a + b;
+    return c;
+  }
+
+  // 함수를 호출하고 함수에서 기능(덧셈) 실행후 결과 값을 반환 받는다.
+  const a = sum(10, 20);
+  console.log("덧셈 결과는 " + a);
+</script>
