@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h2>자바스크립트 객체</h2>
+</body>
+
+<script>
+  // 1. 객체 리터럴 방식
+  const person = {
+    name: '홍길동',
+    age: 10,
+    print: function() {
+      console.log('제 이름은 ' + this.name + '이고 나이는 ' + this.age + ' 입니다.');
+    },
+  };
+
+  person.print();
+  console.log(person);
+
+  // 2. Object() 생성자 함수를 이용
+  const teacher = new Object();
+
+  // teacher 객체의 프로퍼티 정의(할당)
+  teacher.name = "김유신";
+  teacher.age = 20;
+  teacher.print = function() {
+      console.log('제 이름은 ' + this.name + '이고, 나이는' + this.age + '입니다');
+  };
+
+  teacher.print();
+  console.log(teacher);
+
+  // 3. 생성자 함수를 사용한 방식(객체지향 클래스 흉내내기)
+  function Student(name, age) {
+		this.name = name;
+		this.age = age;
+		this.print = function () {
+      console.log('제 이름은 ' + this.name + '이고, 나이는' + this.age + '입니다');
+		}
+	}
+
+  // 1번과 2번의 가장 큰 차이는 new라는 생성자 키워드를 통해
+  // 동일한 형식의 객체를 생성하는 재사용성에 있다.
+  // 여기에서 생성(new)라는 것은 메모리의 공간을 따로 만든다는 것이다.
+  const st1 = new Student("이순신", 30);
+  const st2 = new Student("강감찬", 40);
+  const st3 = new Student("이성계", 50);
+  
+  st1.print();
+  console.log(st1)
+
+  st2.print();
+  console.log(st2)
+
+  st3.print();
+  console.log(st3);
+
+  // 객체 리터럴/프로퍼티 방식 vs 객체 생성 방식
+  const p1 = person;
+  const p2 = person;
+  
+  p1.name = "최철수";
+  console.log(p1.name);
+
+  p2.name = "김영희";
+  console.log(p2.name);
+
+  console.log(p1);
+  console.log(p2);
+
+  const t1 = teacher;
+  const t2 = teacher;
+  
+  t1.name = "전지현";
+  t2.name = "이효리";
+  
+  console.log(t1);
+  console.log(t2);
+</script>

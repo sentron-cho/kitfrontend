@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h2>자바스크립트 객체</h2>
+</body>
+
+<script>
+  // 일반적인 변수 정의 및 사용
+  const name = "홍길동";
+  console.log(name);
+
+  // 객체 정의
+  const person = {
+    name: '홍길동',
+    age: 23,
+    // s-stype: '남' // 키 형식 오류
+    's-type': '남', // 특수문자는 ' or " 로 감싸야 한다.
+    "birth day": '2000.01.01' // 공백도 ' or " 로 감싸야 한다.
+  };
+
+  console.log(person.name);
+  // console.log(person.s-type);      // 특수문자가 포함된 키는 이 형식으로 사용 불가
+  console.log(person['s-type']);      // 특수문자가 포함된 키로 호출시 [] 를 사용한다.
+  console.log(person['birth day']);   // 공백문자가 포함된 것도 동일
+  console.log(person['age']);         // 일반적인건 당연히 가능하다.
+
+  console.log(person);                // 한번에 출력
+
+  // 객체의 프로퍼티 함수(메소드)
+  const student = { 
+    age: 20,
+    // 배열도 프로퍼티로 가질수 있다.
+    scores: [90, 100, 80],
+    name: function(name) {
+      return `제 이름은 ${name}이고 나이는 ${this.age}입니다.`;
+    },
+  }
+
+  console.log(student.scores);
+  console.log(student.name("홍길동"));
+</script>
