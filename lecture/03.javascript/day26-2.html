@@ -41,4 +41,67 @@
   console.log("=====> charCodeAt(position)");
   console.log(str1.charCodeAt(0));
   console.log(str2.charCodeAt(1));
+
+  // concat(args)   매개변수로 입력한 문자열을 결합
+  console.log("=====> concat(args)");
+  console.log(str1.concat("1234"));
+  console.log(str2.concat("!@#"));
+
+  // indexOf(searchString, position)		앞에서부터 일치하는 문자열의 인덱스 반환
+  console.log("=====> indexOf(searchString, position)");
+  console.log(str1.indexOf("C"));  // 찾으면 인덱스 값 반환
+  console.log(str2.indexOf("c"));  // 못찾으면 -1 반환
+
+  // lastIndexOf(searchString, position)	뒤에서부터 일치하는 문자열의 인덱스 반환
+  console.log("=====> lastIndexOf(searchString, position)");
+  console.log(str1.lastIndexOf("C"));  // 찾으면 인덱스 값 반환
+  console.log(str2.lastIndexOf("c"));  // 못찾으면 -1 반환
+
+  // match(regExp)				문자열 안에 regExp가 있는지 확인
+  console.log("=====> match(regExp)");
+  console.log(str1.match("BC"));
+  console.log(str2.match("가가"));
+  console.log(Boolean(str1.match("BC")));
+  console.log(Boolean(str2.match("가가")));
+
+  // replace(regExp, replacement)		문자열 안의 regExp를 replacement로 바꾼 뒤 리턴
+  console.log("=====> replace(regExp, replacement)");
+  console.log(str1.replace("ABC", "가나다"));
+  console.log(str2.replace("가나다", "12"));
+
+  // search(regExp)				regExp와 일치하는 문자열의 위치 반환
+  console.log("=====> search(regExp)");
+  console.log(str1.search("CD"));  // 찾으면 위치 반환
+  console.log(str2.search("123"));  // 못찾으면 -1 반환
+
+  // slice(start, end)				특정 위치의 문자열을 반환
+  console.log("=====> slice(start, end)");
+  console.log(str1.slice(1, 3));
+  console.log(str2.slice(0, 2));
+
+  // split(separator, limit)			separator로 문자열을 자른 후 배열로 반환
+  console.log("=====> split(separator, limit)");
+  console.log("1.2.3.가나다.AB".split("."));
+  console.log("1.2.3.가나다.AB".split(".", 3));
+
+  // substr(start, count)			start부터 count까지 문자열을 잘라서 반환
+  console.log("=====> substr(start, count)");
+  console.log(str1.substr(2, 3));
+  console.log(str2.substr(2, 1));
+
+  // substring(start, end)			start부터 end까지 문자열을 잘라서 반환
+  console.log("=====> substr(start, count)");
+  console.log(str1.substring(2, 3));
+  console.log(str2.substring(1, 2));
+  // console.log(str2.substring(3, 1));
+
+  // toLowerCase()				문자열을 소문자로 바꾸어 반환
+  console.log("=====> toLowerCase()");
+  console.log("ABCDE".toLowerCase());
+  console.log("AbCde".toLowerCase());
+
+  // toUpperCase()				문자열을 대문자로 바꾸어 반환
+  console.log("=====> toUpperCase()");
+  console.log("ABCDE".toUpperCase());
+  console.log("AbCde".toUpperCase());
 </script>

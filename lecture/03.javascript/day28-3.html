@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h2>문서 객체 모델(DOM)</h2>
+  <div id="box"></div>
+</body>
+
+<script>
+  // 문서가 모두 로딩된 후에 실행된다.
+  window.onload = function() {
+    // 문서에 객체(태그)를 삽입하기
+    // <h2> 태그를 생성
+    const header = document.createElement('h2');
+    const text = document.createTextNode('동적으로 태그를 만들자...');
+
+    // <h2>에 text를 연결(삽입)한다.
+    header.appendChild(text);
+
+    // <body> 문서 하위로 <h2>를 문서 객체를 삽입한다.
+    document.body.appendChild(header);
+
+    
+    // const div = document.createElement('div');
+
+    // document.body.appendChild(div);
+
+    // // <body> 문서 하위로 <h2>를 문서 객체를 삽입한다.
+    // div.after(text);
+
+    
+    
+    
+    // createImage();
+    // createHtml();
+  }
+
+  // 텍스트를 갖지 않는 이미지를 문서에 삽입하기
+  const createImage = function() {
+    // <img> 태그를 생성
+    const img = document.createElement('img');
+    
+    // 이미지 태그의 속성 설정
+    img.src = "./day27-1.png";  // 이미지의 source url(path) 설정
+    img.width = 200;            // 넓이 설정
+    // setAttribute() 메소드를 이용해 속성 설정이 가능하다.
+    img.setAttribute('width', '100px');
+
+    // <body> 문서 하위로 객체 삽입
+    document.body.appendChild(img);
+  }
+
+  // innerHTML을 이용한 텍스트 삽입하기
+  const createHtml = function() {
+    // <div> 태그를 생성
+    const div = document.createElement('div');
+
+    const h3 = "<h3>innerHTML을 이용해 텍스트를 문서에 직접 추가하였습니다.</h3>";
+
+    const list = '<ul>'
+        + '<li>HTML</li>'
+        + '<li>CSS</li>'
+        + '<li>HTML</li>'
+        + '</ul>';
+
+    // 위의 <h3> 태그에 추가해서 <ul>을 아래에 넣어야 하므로 + 을 해준다
+    div.innerHTML = h3 + list;
+
+    // <body> 문서 하위로 객체 삽입
+      document.body.appendChild(div);
+  }
+</script>

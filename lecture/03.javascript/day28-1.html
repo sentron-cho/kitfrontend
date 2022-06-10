@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h2 id="title">문서 객체 모델 탐색</h2>
+  <div id="fruits">
+    <ul class="ul-list">
+      <li id="apple" name="list">사과</li>
+      <li id="banana" name="list">바나나</li>
+      <li id="orange" name="list">오렌지</li>
+    </ul>
+  </div>
+  <div id="animals">
+    <ul class="ul-list">
+      <li>홍길동</li>
+      <li>이순신</li>
+      <li>김유신</li>
+    </ul>
+  </div>
+</body>
+
+<script>
+  // 문서가 모두 로딩된 후에 실행된다.
+  window.onload = function() {
+    // getElementById
+    console.log("==============> getElementById")
+    const fruits = document.getElementById('fruits');
+    console.log(fruits);
+
+    // getElementsByTagName
+    console.log("==============> getElementsByTagName");
+    const div = document.getElementsByTagName('ul');
+    console.log(div);
+
+    // getElementsByTagName
+    console.log("==============> getElementsByName");
+    const list = document.getElementsByName('list');
+    console.log(list);
+
+    // querySelector -> id
+    console.log("==============> querySelector -> id");
+    const id = document.querySelector('#animals');
+    console.log(list);
+
+    // querySelector class
+    console.log("==============> querySelector -> class");
+    const cls = document.querySelector('.ul-list');
+    console.log(list);
+
+    // querySelector tag
+    console.log("==============> querySelector -> tag");
+    const tag = document.querySelector('ul');
+    console.log(list);
+  }
+
+</script>
