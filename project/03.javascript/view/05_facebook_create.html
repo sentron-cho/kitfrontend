@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko" id="facebook" class="">
+  <head>
+    <title id="pageTitle">Facebook - 로그인 또는 가입</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 먼저 기존의 css를 우선으로 링크하자 -->
+    <link rel="stylesheet" type="text/css" href="../css/05.create.css" />
+    <!-- 그리고 반응형 css 파일을 링크하자 -->
+    <link rel="stylesheet" type="text/css" href="../css/15.create.css" />
+    <!-- 링크한(내부에 정의된) 순서에 의해 이후에 정의한 내용이 덮어씌워진다. -->
+  </head>
+  <!-- https://www.flaticon.com/kr/free-icon/home-icon-silhouette_69524 -->
+  <body>
+      <header>
+      </header>
+      <main>
+        <section class="container">
+          <ul class="list">
+            <li>
+              <div class="card">
+                <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                <div class="text">
+                  <span class="title">Cha & Kwon</span>
+                  <span class="label">변호사 및 법률 사무소</span>
+                  <span class="label">정천수 님 외 2명이 이 페이지를 좋아합니다.</span>
+                </div>
+                <button>좋아요</button>
+                <span class="btn-box"><img src="../images/close.png" alt="닫기 버튼" /></span>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                <div class="text">
+                  <span class="title">Cha & Kwon</span>
+                  <span class="label">변호사 및 법률 사무소</span>
+                  <span class="label">정천수 님 외 2명이 이 페이지를 좋아합니다.</span>
+                </div>
+                <button>좋아요</button>
+                <span class="btn-box"><img src="../images/close.png" alt="닫기 버튼" /></span>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                <div class="text">
+                  <span class="title">Cha & Kwon</span>
+                  <span class="label">변호사 및 법률 사무소</span>
+                  <span class="label">정천수 님 외 2명이 이 페이지를 좋아합니다.</span>
+                </div>
+                <button>좋아요</button>
+                <span class="btn-box"><img src="../images/close.png" alt="닫기 버튼" /></span>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                <div class="text">
+                  <span class="title">Cha & Kwon</span>
+                  <span class="label">변호사 및 법률 사무소</span>
+                  <span class="label">정천수 님 외 2명이 이 페이지를 좋아합니다.</span>
+                </div>
+                <button>좋아요</button>
+                <span class="btn-box"><img src="../images/close.png" alt="닫기 버튼" /></span>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                <div class="text">
+                  <span class="title">Cha & Kwon</span>
+                  <span class="label">변호사 및 법률 사무소</span>
+                  <span class="label">정천수 님 외 2명이 이 페이지를 좋아합니다.</span>
+                </div>
+                <button>좋아요</button>
+                <span class="btn-box"><img src="../images/close.png" alt="닫기 버튼" /></span>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="../images/sample-image.jpg" alt="광고 메인 이미지" />
+                <div class="text">
+                  <span class="title">Cha & Kwon</span>
+                  <span class="label">변호사 및 법률 사무소</span>
+                  <span class="label">정천수 님 외 2명이 이 페이지를 좋아합니다.</span>
+                </div>
+                <button>좋아요</button>
+                <span class="btn-box"><img src="../images/close.png" alt="닫기 버튼" /></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+  </body>
+</html>
+
+<script>
+  const list = [...document.getElementsByClassName("btn-box")];
+
+  list.forEach(element => element.onclick = () => {
+    list.forEach(a => a.className = "btn-box")
+    element.classList.add('active');
+  })
+</script>

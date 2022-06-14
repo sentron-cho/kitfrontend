@@ -4,7 +4,7 @@
 </head>
 
 <body>
-  <h2>문서 객체 모델(DOM)</h2>
+  <h2 id="title">문서 객체 모델 추가/삭제</h2>
   <div id="box"></div>
 </body>
 
@@ -21,54 +21,53 @@
 
     // <body> 문서 하위로 <h2>를 문서 객체를 삽입한다.
     document.body.appendChild(header);
-
     
-    // const div = document.createElement('div');
+    const section = document.createElement('section');
+    document.body.appendChild(section);
 
-    // document.body.appendChild(div);
-
-    // // <body> 문서 하위로 <h2>를 문서 객체를 삽입한다.
-    // div.after(text);
-
+    // before : 선택한 노드의 앞에 추가한다.
+    // <section> 뒤에 텍스트 노드를 추가해보자
+    const t2 = document.createTextNode('<section> 태그 앞(before)에 텍스트');
+    section.before(t2);
     
-    
-    
-    // createImage();
-    // createHtml();
-  }
+    // after : 선택한 노드의 뒤에 추가한다.
+    // <section> 뒤에 텍스트 노드를 추가해보자
+    const t3 = document.createTextNode('<section> 태그 뒤(after)에 텍스트');
+    section.after(t3);
 
-  // 텍스트를 갖지 않는 이미지를 문서에 삽입하기
-  const createImage = function() {
-    // <img> 태그를 생성
-    const img = document.createElement('img');
-    
-    // 이미지 태그의 속성 설정
-    img.src = "./day27-1.png";  // 이미지의 source url(path) 설정
-    img.width = 200;            // 넓이 설정
-    // setAttribute() 메소드를 이용해 속성 설정이 가능하다.
-    img.setAttribute('width', '100px');
+    // 테스트를 위해 추가
+    section.appendChild(document.createTextNode('텍스트 1'));
+    section.appendChild(document.createTextNode('텍스트 2'));
+    section.appendChild(document.createTextNode('텍스트 3'));
 
-    // <body> 문서 하위로 객체 삽입
-    document.body.appendChild(img);
-  }
+    // prepend : 현재 엘리먼트의 자식 엘리먼트 첫번째에 추가한다.
+    const t4 = document.createTextNode('[[ <section> 자식 태그 맨 앞에(first) ]]');
+    section.prepend(t4);
 
-  // innerHTML을 이용한 텍스트 삽입하기
-  const createHtml = function() {
-    // <div> 태그를 생성
+    // append : 현재 엘리먼트의 자식 엘리먼트 마지막에 추가한다.
+    const t5 = document.createTextNode('[[ <section> 자식 태그 맨 뒤에(last) ]]');
+    section.append(t5);
+
+    // setAttribute()		현재 엘리먼트의 속성을 설정한다.
+    section.setAttribute("title", "메인 섹션")
+    section.setAttribute("class", "main-section")
+
     const div = document.createElement('div');
-
-    const h3 = "<h3>innerHTML을 이용해 텍스트를 문서에 직접 추가하였습니다.</h3>";
-
     const list = '<ul>'
-        + '<li>HTML</li>'
-        + '<li>CSS</li>'
-        + '<li>HTML</li>'
+        + '<li id="html">HTML</li>'
+        + '<li id="css">CSS</li>'
+        + '<li id="js">JavaScript</li>'
         + '</ul>';
 
     // 위의 <h3> 태그에 추가해서 <ul>을 아래에 넣어야 하므로 + 을 해준다
-    div.innerHTML = h3 + list;
+    div.innerHTML = list;
 
     // <body> 문서 하위로 객체 삽입
-      document.body.appendChild(div);
+    document.body.appendChild(div);
+    
+
+    // remove()		선택한 엘리먼트를 삭제
+    const html = document.getElementById('html')
+    html.remove();
   }
 </script>
