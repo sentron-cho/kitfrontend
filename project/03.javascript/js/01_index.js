@@ -1,11 +1,7 @@
-// import req from "./00_request";
-// const req = require("./00_request");
-
 window.onload = function() {
-    // console.log("안녕하세요")
-    // const item = request.login("sentron1");
-    // if(item) console.log(item)
-    // else console.log("아이디가 없습니다.")
+    // 화면의 element들이 모두 로딩된 후 호출된다.
+    // 일반적으로 document 안의 element 조작을 위해서는
+    // 이것이 호출 된 후에 작업을 진행한다.
 }
 
 const login = function() {
@@ -24,5 +20,4 @@ const login = function() {
             alert("아이디 또는 비밀번호를 찾을 수 없습니다.");
         }
     }
-
 }
