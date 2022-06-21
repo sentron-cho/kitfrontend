@@ -77,6 +77,9 @@ height: 36px;
 padding: 5px 10px;
 box-sizing: border-box;
 }
+.in-age option {
+    font-size: 14px;
+}
 /* 라디오 버튼 텍스트 */
 .text {
 color: #606770;
