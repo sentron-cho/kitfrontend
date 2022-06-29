@@ -6,38 +6,45 @@
 <body>
   <h2>background-attachment</h2>
 
-  <div style="background-attachment: fixed; height: 4000px; width: 4000px;">
-    <h1>fixed: 배경을 뷰포트에 고정, 화면에 스크롤이 있어도 스크롤 안함</h1>
-  </div>
-
-  <!-- <div style="background-attachment: local;">
-    <h1>local: 배경을 콘텐츠에 고정, 콘텐츠와 함께 배경도 스크롤됨</h1>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-  </div>
-
-  <div style="background-attachment: scroll;">
-    <h1>scroll: 배경을 요소 자체에 고정하여 함께 스크롤되지 않음</h1>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-    <p>안녕하세요<br>프론트엔드<br>과정입니다.</p>
-  </div> -->
+  <section style="width: 900px; height: 600px">
+    <div style="background-attachment: scroll;">
+      <h1>scroll</h1>
+      <p>배경을 요소 자체에 고정</p>
+      <p>콘텐츠와 함께 스크롤되지 않음</p>
+      <p>안녕하세요</p><p>프론트엔드</p><p>과정입니다</p>
+      <p>안녕하세요</p><p>프론트엔드</p><p>과정입니다</p>
+    </div>
+    
+    <div style="background-attachment: fixed;">
+      <h1>fixed</h1>
+      <p>배경을 뷰포트에 고정</p>
+      <p>화면에 스크롤이 있어도 스크롤 안함</p>
+      <p>안녕하세요</p><p>프론트엔드</p><p>과정입니다</p>
+      <p>안녕하세요</p><p>프론트엔드</p><p>과정입니다</p>
+    </div>
+    
+    <div style="background-attachment: local;">
+      <h1>local</h1>
+      <p>배경을 콘텐츠에 고정</p>
+      <p>콘텐츠와 함께 배경도 스크롤됨</p>
+      <p>안녕하세요</p><p>프론트엔드</p><p>과정입니다</p>
+      <p>안녕하세요</p><p>프론트엔드</p><p>과정입니다</p>
+    </div>
+  </section>
 </body>
 
 <style>
-  body { padding: 0; margin: 0; }
+  body { padding: 0; margin: 0; padding-bottom: 2000px; }
   div { 
-    background-color: rgb(255, 245, 199);
+    display: inline-block;
     border: 1px solid gray;
-    width: 600px;
-    height: 300px; 
+    width: 30%;
+    height: 500px; 
     overflow: auto;
-    background-image: url("./day11-1.png"); 
+    background-image: url("./day11-5.jpg"); 
     background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 80px;
+    font-size: 18px;
   }
 </style>
