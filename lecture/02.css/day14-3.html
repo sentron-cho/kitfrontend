@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<!-- 
+  flex-wrap
+    nowrap	    	모든 Itmes를 여러 줄로 묶지 않음(한 줄에 표시)
+    wrap		      Items를 여러 줄로 묶음	
+    wrap-reverse	Items를 wrap의 역 방향으로 여러 줄로 묶음
+ -->
+
+<body>
+  <h2>flex-wrap</h2>
+
+  <p>nowrap</p>
+  <div class="container nowrap">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+  
+  <p>wrap</p>
+  <div class="container wrap">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+  
+  <p>wrap-reverse</p>
+  <div class="container wrap-reverse">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+</body>
+
+<style>
+  /* 기본 속성 */
+  div {
+    background-color: rgb(200, 200, 200); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin: 2px;
+  }
+  
+  .container { display: flex; width: 300px; }
+  .item { width: 50px; height: 50px; background-color: yellow; }
+
+  /* flex-wrap 속성 */
+  .container.nowrap { display: flex; flex-wrap: nowrap; width: 200px; }
+  .container.wrap { display: flex; flex-wrap: wrap; width: 200px; }
+  .container.wrap-reverse { display: flex; flex-wrap: wrap-reverse; width: 200px; }
+</style>

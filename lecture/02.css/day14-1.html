@@ -3,221 +3,44 @@
   <meta charset="UTF-8" />
 </head>
 
+<!-- 
+  display
+	  flex		Block 특성으로 컨테이너가 수직 방향 정렬.	
+    inline-flex	Inline 특성으로 컨테이너가 수평 방향 정렬
+ -->
+
 <body>
   <h2>display 속성</h2>
-  <section class="display">
-    <div class="container flex">
-      <label>flex</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-    <div class="container flex">
-      <label>flex</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-  </section>
 
-  <section class="display">
-    <div class="container inline-flex">
-      <label>inline-flex</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-    <div class="container inline-flex">
-      <label>inline-flex</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-  </section>
+  <p>flex</p>
+  <div class="container flex">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+  <div class="container flex">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 
-  <h2>flex-direction</h2>
-  <section class="flex-direction">
-    <div class="container row">
-      <label>row</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-    <div class="container row-reverse">
-      <label>row-reverse</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-    <div class="container column">
-      <label>column</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-    <div class="container column-reverse">
-      <label>column-reverse</label>
-      <div class="item"></div><div class="item"></div><div class="item"></div>
-    </div>
-  </section>
-
-  <h2>flex-wrap</h2>
-  <section class="flex-wrap">
-    <div class="container nowrap">
-      <label>nowrap</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container wrap">
-      <label>wrap</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container wrap-reverse">
-      <label>wrap-reverse</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-  </section>
-
-  <h2>justify-content</h2>
-  <section class="justify-content">
-    <div class="container flex-start">
-      <label>flex-start</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
-    </div>
-    <div class="container flex-end">
-      <label>flex-end</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
-    </div>
-    <div class="container center">
-      <label>flex-center</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
-    </div>
-    <div class="container space-between">
-      <label>space-between(사이)</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
-    </div>
-    <div class="container space-around">
-      <label>space-around(맨 앞/뒤)</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
-    </div>
-  </section>
-
-  <h2>align-content</h2>
-  <section class="align-content">
-    <div class="container stretch">
-      <label>stretch</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container flex-start">
-      <label>flex-start</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container flex-end">
-      <label>flex-end</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container center">
-      <label>flex-center</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container space-between">
-      <label>space-between(사이)</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container space-around">
-      <label>space-around(맨 앞/뒤)</label>
-      <div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-  </section>
-
-  <h2>align-items</h2>
-  <section class="align-items">
-    <div class="container stretch">
-      <label>stretch</label>
-      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container flex-start">
-      <label>flex-start</label>
-      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container flex-end">
-      <label>flex-end</label>
-      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container center">
-      <label>flex-center(박스기준)</label>
-      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-    <div class="container baseline">
-      <label>baseline(문자기준)</label>
-      <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
-    </div>
-  </section>
+  <p>inline-flex</p>
+  <div class="container inline-flex">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
+  <div class="container inline-flex">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 </body>
 
 <style>
-  body { padding-bottom: 100px; }
+  /* 기본 속성 */
   div {
     background-color: rgb(200, 200, 200); 
     border: 1px dotted rgb(48, 48, 48); 
     margin: 2px;
   }
-
-  section {
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    border-top: dashed 1px;
-    border-color: gray;
-  }
   
-  label { position: absolute; bottom: -20px; left: 0px; }
-  
-  .container { width: 200px; min-height: 80px; position: relative; }
-
-  .item { width: 40px; height: 40px; background-color: yellow; }
+  .container { display: flex; width: 300px; }
+  .item { width: 50px; height: 50px; background-color: yellow; }
 
   /* display 속성 */
-  .display .container.flex { display: flex; }
-  .display .container.inline-flex { display: inline-flex; }
-
-  /* flex-direction 속성 */
-  .flex-direction { display: flex; }
-  .flex-direction .container { height: 200px; }
-
-  .flex-direction .container.row { display: flex; flex-direction: row; }
-  .flex-direction .container.row-reverse { display: flex; flex-direction: row-reverse; }
-  .flex-direction .container.column { display: flex; flex-direction: column; }
-  .flex-direction .container.column-reverse { display: flex; flex-direction: column-reverse; }
-
-  /* flex-wrap 속성 */
-  .flex-wrap { display: flex; }
-  .flex-wrap .container { display: flex; width: 180px; }
-
-  .flex-wrap .container.nowrap { flex-wrap: nowrap; }
-  .flex-wrap .container.wrap { flex-wrap: wrap; }
-  .flex-wrap .container.wrap-reverse { flex-wrap: wrap-reverse; }
-
-  /* justify-content 속성 */
-  .justify-content { display: flex; }
-  .justify-content .container { display: flex; width: 180px; }
-
-  .justify-content .container.flex-start { justify-content: flex-start; }
-  .justify-content .container.flex-end { justify-content: flex-end; }
-  .justify-content .container.center { justify-content: center; }
-  .justify-content .container.space-between { justify-content: space-between; }
-  .justify-content .container.space-around { justify-content: space-around; }
-  
-  /* align-content 속성 */
-  .align-content { display: flex; }
-  .align-content .container { display: flex; width: 180px; height: 140px; flex-wrap: wrap; }
-
-  .align-content .container.stretch { align-content: stretch; }
-  .align-content .container.stretch .item { height: auto; }
-
-  .align-content .container.flex-start { align-content: flex-start; }
-  .align-content .container.flex-end { align-content: flex-end; }
-  .align-content .container.center { align-content: center; }
-  .align-content .container.space-between { align-content: space-between; }
-  .align-content .container.space-around { align-content: space-around; }
-
-   /* align-items 속성 */
-  .align-items { display: flex; }
-  .align-items .container { display: flex; width: 180px; height: 140px; flex-wrap: wrap; }
-
-  .align-items .container.stretch { align-items: stretch; }
-  .align-items .container.stretch .item { height: auto; }
-  .align-items .container .a { height: 50px; font-size: 20px; line-height: 30px; }
-  .align-items .container .b { height: 20px; }
-  .align-items .container .c { height: 30px; }
-
-  .align-items .container.flex-start { align-items: flex-start; }
-  .align-items .container.flex-end { align-items: flex-end; }
-  .align-items .container.center { align-items: center; }
-  .align-items .container.baseline { align-items: baseline; }
+  .container.flex { display: flex; height: 100px; }
+  .container.inline-flex { display: inline-flex; height: 100px; }
 </style>

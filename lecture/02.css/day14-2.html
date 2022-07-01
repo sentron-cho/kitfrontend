@@ -3,111 +3,50 @@
   <meta charset="UTF-8" />
 </head>
 
+<!-- 
+  flex-flow
+	  flex-direction	Items의 주 축(main-axis)을 row로 설정	
+    flex-wrap	Items의 여러 줄 묶음(줄 바꿈) nowrap 설정
+ -->
+
 <body>
-  <h2>order</h2>
-  <section class="order">
-    <div class="container">
-      <div class="item" style="order: 0;">order: 0;</div>
-      <div class="item" style="order: 0;">order: 0;</div>
-      <div class="item" style="order: 0;">order: 0;</div>
-      <div class="item" style="order: 0;">order: 0;</div>
-      <div class="item" style="order: 0;">order: 0;</div>
-    </div>
-    <div class="container">
-      <div class="item" style="order: 1;">order: 1;</div>
-      <div class="item" style="order: -10;">order: -10;</div>
-      <div class="item" style="order: 1;">order: 1;</div>
-      <div class="item" style="order: 12;">order: 12;</div>
-      <div class="item" style="order: 0;">order: 0;</div>
-    </div>
-  </section>
+  <h2>flex-direction</h2>
 
-  <h2>flex-grow</h2>
-  <section class="flex-grow">
-    <div class="container">
-      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
-      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
-      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
-    </div>
-    <div class="container">
-      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
-      <div class="item" style="flex-grow: 2;">flex-grow: 2;</div>
-      <div class="item" style="flex-grow: 3;">flex-grow: 3;</div>
-    </div>
-  </section>
+  <p>row</p>
+  <div class="container row">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 
-  <!-- <h2>flex-basis</h2>
-  <section class="flex-basis">
-    <div class="container flex-basis">
-      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
-      <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
-      <div class="item" style="flex-grow: 2;">flex-grow: 2;</div>
-    </div>
-    <div class="container flex-basis">
-      <div class="item" style="flex-grow: 1; flex-basis: 100px;">flex-grow: 1;<br>flex-basis: 100px;</div>
-      <div class="item" style="flex-grow: 1; flex-basis: 100px;">flex-grow: 2;<br>flex-basis: 100px;</div>
-      <div class="item" style="flex-grow: 2; flex-basis: 100px;">flex-grow: 3;<br>flex-basis: 100px;</div>
-    </div>
-  </section>
-   -->
-  <h2>align-items row</h2>
-  <section class="align-items">
-    <div class="container" style="height: 300px;">
-      <div class="item stretch" style="align-self: stretch; height: auto;">stretch<br>height: auto;</div>
-      <div class="item" style="align-self: flex-start;">flex-start</div>
-      <div class="item" style="align-self: center;">center</div>
-      <div class="item" style="align-self: flex-end;">flex-end</div>
-    </div>
-  </section>
+  <p>row-reverse</p>
+  <div class="container row-reverse">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 
-  <h2>align-items column</h2>
-  <section class="align-items">
-    <div class="container" style="flex-direction: column; height: fit-content;">
-      <div class="item" style="align-self: stretch; width: auto;">stretch<br>width: auto;</div>
-      <div class="item" style="align-self: stretch; width: auto;">stretch<br>width: auto;</div>
-    </div>
-    <div class="container" style="flex-direction: column; height: fit-content;">
-      <div class="item" style="align-self: flex-start;">flex-start</div>
-      <div class="item" style="align-self: flex-start;">flex-start</div>
-    </div>
-    <div class="container" style="flex-direction: column; height: fit-content;">
-      <div class="item" style="align-self: center;">center</div>
-      <div class="item" style="align-self: center;">center</div>
-    </div>
-    <div class="container" style="flex-direction: column; height: fit-content;">
-      <div class="item" style="align-self: flex-end;">flex-end</div>
-      <div class="item" style="align-self: flex-end;">flex-end</div>
-    </div>
-    <div class="container" style="flex-direction: column;">
-      <div class="item" style="align-self: stretch; width: auto;">stretch<br>width: auto;</div>
-      <div class="item" style="align-self: flex-start;">flex-start</div>
-      <div class="item" style="align-self: center;">center</div>
-      <div class="item" style="align-self: flex-end;">flex-end</div>
-    </div>
-  </section>
+  <p>column</p>
+  <div class="container column">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 
+  <p>column-reverse</p>
+  <div class="container column-reverse">
+    <div class="item"></div><div class="item"></div><div class="item"></div>
+  </div>
 </body>
 
 <style>
-  body { padding-bottom: 100px; }
+  /* 기본 속성 */
   div {
     background-color: rgb(200, 200, 200); 
     border: 1px dotted rgb(48, 48, 48); 
     margin: 2px;
   }
-
-  section {
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    border-top: dashed 1px;
-    border-color: gray;
-  }
   
-  /* label { position: absolute; bottom: -20px; left: 0px; } */
-  
-  .container { width: 600px; min-height: 80px; position: relative; display: flex; flex-direction: row; }
+  .container { display: flex; width: 300px; }
+  .item { width: 50px; height: 50px; background-color: yellow; }
 
-  .item { width: 100px; height: 60px; background-color: yellow; font-size: 14px; text-align: center; }
-
+  /* flex-direction 속성 */
+  .container.row { flex-direction: row; height: 100px; }
+  .container.row-reverse { flex-direction: row-reverse; height: 100px; }
+  .container.column { flex-direction: column; height: 200px; }
+  .container.column-reverse { flex-direction: column-reverse; height: 200px; }
 </style>

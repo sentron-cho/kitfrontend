@@ -4,65 +4,42 @@
 </head>
 
 <body>
-  <h2>그리드 라인 배치</h2>
-  <section class="s1">  
-    <div class="box1">Box 1</div>
-    <div class="box2">Box 2</div>
-    <div class="box3">Box 3</div>
-    <div class="box4">Box 4</div>
-    <div class="box5">Box 5</div>
-    <div class="box6">Box 6</div>
-  </section>
+  <h2>flex-grow row</h2>
+
+  <div class="container" style="flex-direction: row;">
+    <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+    <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+    <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+  </div>
+
+  <div class="container" style="flex-direction: row;">
+    <div class="item" style="width: auto; flex-grow: 1;">flex-grow: 1;</div>
+    <div class="item" style="width: auto; flex-grow: 2;">flex-grow: 2;</div>
+    <div class="item" style="width: auto; flex-grow: 3;">flex-grow: 3;</div>
+  </div>
+
+  <h2>flex-grow column</h2>
+  <div class="container" style="flex-direction: column; height: 300px;">
+    <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+    <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+    <div class="item" style="flex-grow: 1;">flex-grow: 1;</div>
+  </div>
+
+  <div class="container" style="flex-direction: column; height: 300px;">
+    <div class="item" style="height: auto; flex-grow: 1;">flex-grow: 1;</div>
+    <div class="item" style="height: auto; flex-grow: 2;">flex-grow: 2;</div>
+    <div class="item" style="height: auto; flex-grow: 3;">flex-grow: 3;</div>
+  </div>
 </body>
 
 <style>
-  body { padding-bottom: 200px;}
-
-  section { 
-    width: 800px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 100px);
-  }
-
   div {
-    background-color: rgb(255, 255, 100); 
-    border: 1px dotted rgb(48, 48, 48);
-    padding: 5px;
+    background-color: rgb(200, 200, 200); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin: 2px;
   }
+  
+  .container { width: 600px; min-height: 80px; position: relative; display: flex; }
 
-  .box1 { 
-    background: rgb(255, 200, 200); 
-    grid-column: 1/4;   /* 1 ~ 4까지(전체 컬럼)*/
-    grid-row: 1/2;      /* 1 ~ 2까지(1줄)*/
-  }
-
-  .box2 { 
-    background: rgb(200, 255, 200); 
-    grid-column: 1/2;   /* 1 ~ 2까지(1컬럼)*/
-    grid-row: 2/4;      /* 2 ~ 4까지(2줄)*/
-  }
-
-  .box3 { 
-    background: rgb(200, 200, 255); 
-    grid-column: 2/4;   /* 2 ~ 4까지 */
-    grid-row-start: 2;  /* 2번줄(만) */
-  }
-
-  .box4 { 
-    background: rgb(255, 255, 200); 
-    grid-column-start: 2;
-    grid-row-start: 3;  /* 3번줄(만) */
-  }
-
-  .box5 { 
-    background: rgb(255, 200, 255); 
-    grid-column-start: 3;
-    grid-row-start: 3;  /* 3번줄(만) */
-    grid-row-end: 5;  /* 3번줄(만) */
-  }
-
-  .box6 { 
-    background: rgb(200, 255, 255); 
-  }
+  .item { width: 100px; height: 60px; background-color: yellow; font-size: 14px; text-align: center; }
 </style>

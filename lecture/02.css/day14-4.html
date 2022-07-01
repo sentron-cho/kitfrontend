@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<!-- 
+  justify-content
+    flex-start	    Items를 시작점(flex-start)으로 정렬	flex-start
+    flex-end		    Items를 끝점(flex-end)으로 정렬	
+    center		      Items를 가운데 정렬	
+    space-between	  시작 Item은 시작점에, 마지막 Item은 끝점에 정렬, 
+                    나머지 Items는 사이에 고르게 정렬됨	
+    space-around	  Items를 균등한 여백을 포함하여 정렬
+ -->
+
+<body>
+  <h2>justify-content</h2>
+
+  <p>flex-start</p>
+  <div class="container flex-start">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+  </div>
+  
+  <p>flex-end</p>
+  <div class="container flex-end">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+  </div>
+  
+  <p>flex-center</p>
+  <div class="container center">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+  </div>
+  
+  <p>space-between</p>
+  <div class="container space-between">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+  </div>
+  
+  <p>space-around</p>
+  <div class="container space-around">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+  </div>
+</body>
+
+<style>
+  /* 기본 속성 */
+  div {
+    background-color: rgb(200, 200, 200); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin: 2px;
+  }
+  
+  .container { display: flex; width: 400px; }
+  .item { width: 80px; height: 80px; background-color: yellow; }
+  
+  /* justify-content 속성 */
+  .container.flex-start { justify-content: flex-start; }
+  .container.flex-end { justify-content: flex-end; }
+  .container.center { justify-content: center; }
+  .container.space-between { justify-content: space-between; }
+  .container.space-around { justify-content: space-around; }
+</style>

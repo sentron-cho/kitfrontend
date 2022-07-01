@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<!-- 
+  align-items
+    stretch		    Container의 교차 축을 채우기 위해 Items를 늘림	stretch
+    flex-start	  Items를 각 줄의 시작점(flex-start)으로 정렬	
+    flex-end		  Items를 각 줄의 끝점(flex-end)으로 정렬	
+    center		  Items를 가운데 정렬	
+    baseline	  Items를 문자 기준선에 정렬
+ -->
+
+<body>
+  <h2>align-items</h2>
+
+  <p>stretch</p>
+  <div class="container stretch">
+    <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+
+  <p>flex-start</p>
+  <div class="container flex-start">
+    <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+  
+  <p>flex-end</p>
+  <div class="container flex-end">
+    <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+  
+  <p>center</p>
+  <div class="container center">
+    <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+  
+  <p>baseline</p>
+  <div class="container baseline">
+    <div class="item a">A</div><div class="item b">B</div><div class="item c">C</div><div class="item">D</div><div class="item">E</div>
+  </div>
+</body>
+
+<style>
+  /* 기본 속성 */
+  div {
+    background-color: rgb(200, 200, 200); 
+    border: 1px dotted rgb(48, 48, 48); 
+    margin: 2px;
+  }
+  
+  .container { display: flex; width: 200px; height: 140px; flex-wrap: wrap; }
+  .item { width: 50px; height: 50px; background-color: yellow; }
+  
+  /* align-items 속성 */
+  .container.stretch { align-items: stretch; }
+  .container.stretch .item { height: auto; }
+  .container .a { height: 50px; font-size: 25px; line-height: 50px; }
+  .container .b { height: 20px; font-size: 14px; line-height: 20px; }
+  .container .c { height: 30px; font-size: 30px; line-height: 30px; }
+
+  .container.flex-start { align-items: flex-start; }
+  .container.flex-end { align-items: flex-end; }
+  .container.center { align-items: center; }
+  .container.baseline { align-items: baseline; }
+</style>
