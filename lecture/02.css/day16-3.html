@@ -3,55 +3,88 @@
   <meta charset="UTF-8" />
 </head>
 
-<body>
-  <section class="s2">  
-    <div class="header">Header(그리드 라인 배치)</div>
-    <div class="side">Side</div>
-    <div class="main">Main</div>
-    <div class="footer">Footer</div>
-  </section>
+<body class="container">
+  <section class="box">
+    <h2 class="title">로그인</h2>
+    <div class="content">
+      <input type="text" name="email" id="email" placeholder="이메일 또는 전화번호" autofocus="1" />
+      <input type="password" name="pass" id="pass" placeholder="비밀번호" />
+      <button name="login" type="button">로그인</button>
+    </div>
+</section>
 </body>
 
 <style>
-  body { padding: 0; margin: 0; }
+  /* flex을 이용해 중앙 정렬(부모의 컨테이너에서 사용해야 한다). */
+  /* 박스의 크기가 반드시 있어야 세로 정렬이 가능하다. */
+  /* body.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  } */
 
-  section { 
-    width: 100%;
-    display: grid;
-    grid-template-columns: 240px auto;
-    grid-template-rows: 60px calc(100vh - 200px) 140px;
+  body.container {
+    height: 100vh;
   }
 
-  div {
-    background-color: rgb(255, 255, 100); 
-    padding: 5px;
-    min-height: 50px;
+  section.box {
+    border: 1px rgb(192, 192, 192) solid;
+    border-radius: 5px;
+    width: 480px;
+    height: 320px;
+    text-align: center;
+    background-color: rgb(203, 230, 255);
+
+    /* 세로 정렬은 되지만 가로 정렬이 안된다. */
+    /* position: relative;
+    margin: auto;
+    top: 50%;
+    margin-top: -200px; */
+    /*
+      body.container {
+        height: 100vh;
+      } 
+    */
+
+    /* 
+      position/transform을 이용해 중앙 정렬. 
+      그래도 셋중에 가장 편한 방법
+    */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .header {
-    grid-area: header;
-    background: rgb(255, 200, 200); 
+  input {
+    display: inline-block;
+    width: calc(100% - 60px);
+    padding: 0;
+    margin-top: 20px;
+    line-height: 30px;
   }
 
-  .side { 
-    grid-area: side;
-    background: rgb(200, 255, 200);
+  button {
+    display: inline-block;
+    width: calc(100% - 60px);
+    padding: 0;
+    margin-top: 30px;
+    height: 40px;
   }
 
-  .main { 
-    grid-area: main;
-    background: rgb(200, 200, 255); 
-  }
 
-  .footer { 
-    grid-area: footer;
-    background: rgb(255, 255, 200); 
-  }
 
-  section.s2 {
-    grid-template-areas:
-		"header header"
-		"side main"
-		"footer footer";
-  }
+  /* 
+    600px 이하의 화면일 경우 아래의 스타일을 적용한다.
+    즉, 최대 크기가 600px까지만 스타일 적용 
+  */
+	@media (max-width: 600px) {
+		section.box { 
+      background-color: white; 
+      border: 0;
+      top: 10px;
+      transform: translate(-50%, 0);
+    }
+	}
 </style>
